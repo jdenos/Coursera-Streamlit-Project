@@ -57,13 +57,20 @@ injured_people = st.sidebar.slider("Number of people injured in the accident (or
                                    value=2)
 time = st.sidebar.slider("What time period do you want to check", min_value=dt.time(00, 00), max_value=dt.time(23, 59),
                          value=[dt.time(12, 00), dt.time(20, 00)], step=dt.timedelta(minutes=15))
+date = st.sidebar.slider("which dates do you want to check", min_value=df['date_time'].dt.date.min(),
+                  max_value=df['date_time'].dt.date.max(),
+                  value=[df['date_time'].dt.date.min(), df['date_time'].dt.date.max()])
 
 # Filtered data
 df_filtred = df[
     (df['date_time'].dt.time >= time[0])
-    & (df['date_time'].dt.time <= time[1])].query('injured_persons >= @injured_people')
+    & (df['date_time'].dt.time <= time[1])
+    & (df['date_time'].dt.date >= date[0])
+    & (df['date_time'].dt.date <= date[1])]\
+    .query('injured_persons >= @injured_people')
 
 # 2D map
 st.header('Location of accidents:')
 st.map(df_filtred[['latitude', 'longitude']]
        .dropna(how='any'))
+
