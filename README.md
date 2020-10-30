@@ -1,3 +1,4 @@
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/jdenos/coursera-streamlit-project/main/main.py)
 # Coursera-Streamlit-Project
 
 This repro is to host the project I did for the coursera project [Build a Data Science Web App with Streamlit and Python](https://www.coursera.org/projects/data-science-streamlit-python)
