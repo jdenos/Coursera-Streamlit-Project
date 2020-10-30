@@ -94,7 +94,7 @@ pexpect=4.8.0=pyh9f0ad1d_2
 pickleshare=0.7.5=py_1003
 pillow=8.0.1=pypi_0
 pip=20.2.4=py_0
-plotly=4.12.0=pyh9f0ad1d_0
+plotly=4.12.0
 prometheus_client=0.8.0=pyh9f0ad1d_0
 prompt-toolkit=3.0.8=py_0
 prompt_toolkit=3.0.8=0
