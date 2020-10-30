@@ -10,6 +10,7 @@ data_file = "./Motor_Vehicle_Collisions_-_Crashes.csv"
 
 st.title = "Motor Vehicle Collisions in NYC"
 st.markdown('''
+# Motor Vehicle Collisions in NYC
 ## Context 
 This dashboard was created for the guided project 
 [Build a Data Science Web App with Streamlit and Python]
@@ -32,7 +33,7 @@ def get_data(nrows=None):
 
 
 # nrows= 100000 # st.slider('How many row do you want to fetch ?',10000,200000000,step=100000)
-df = get_data(1000)
+df = get_data()
 
 if st.checkbox('Raw Data', False):
     st.subheader('Raw Data')
@@ -73,4 +74,5 @@ df_filtred = df[
 st.header('Location of accidents:')
 st.map(df_filtred[['latitude', 'longitude']]
        .dropna(how='any'))
+st.write(len(df))
 

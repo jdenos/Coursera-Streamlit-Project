@@ -10,3 +10,4 @@ In this version we did the following mod to the proposed projects:
 * For the time filter rather than limit to 1h with an int slider we created a slider with time and a min and max time 
 * Rather than printing the table with steamlit we use plotly to avoid the time conversion forced by streamlit (as reported [here](https://github.com/streamlit/streamlit/issues/1061))
   * Table to width should look for a x scroll
+* Not using the dataset provided but using the website csv
